@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr_BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="cyber, design, cybersécurité, cybersecurite">
+
+    <title>Portfolio</title>
+
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+    <link rel="stylesheet" href="./stylesheets/root.css">
+    <link rel="stylesheet" href="./stylesheets/home.css">
+    <link rel="stylesheet" href="./stylesheets/components/stepper.css">
+
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap'); </style>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ruslan+Display&display=swap'); </style>
+</head>
+<body>
+    <!-- Stepper -->
+    <div class="stepper">
+        <div class="dot active" data-target="#home"></div>
+        <div class="dot" data-target="#about"></div>
+        <div class="dot" data-target="#project"></div>
+        <div class="dot" data-target="#contact"></div>
+    </div>
+
+    <!-- Home -->
+    <main id="home">
+        <h1 class="title">Nice to see you here !</h1>
+
+        <div class="about-wrapper">            
+            <p>
+                Hello! <br>
+                I'm a 19yo graphic designer and cyber security student from Belgium. <br>
+                I have a deep passion for learning and mastering new tools and techniques in both the fields of design and cyber security.
+            </p>
+            
+
+            <abbr title="Go to the about-me section">
+                <button onclick="location.href='#about'" type="button">
+                    <img src="./src/cmd.svg" alt="">
+                    <p>whoami</p>
+                </button>
+            </abbr>
+        </div>
+
+        <h2>My name is</h2>
+        <img src="./src/tag.png" alt="tag" draggable="false" class="tag">
+        <img src="./src/arrow.svg" alt="arrow" draggable="false" id="arrow">
+
+    </main>
+
+    <!-- About me -->
+    <section id="about">
+        <h2>More about Me</h2>
+        <p>
+            Hi there ! <br>
+            As I say before, I'm a 19-year-old graphic designer and cyber-security student from Belgium. <br>
+            Like my graffiti says my name is Aloïs. <br>
+        </p>
+
+        <p>
+            After spending two years studying graphic design, I earned a qualification that marked a significant milestone in my creative journey.
+            This program allowed me to develop a strong foundation in design principles, software tools, and visual communication.
+            This qualification not only honed my skills but also ignited a deep passion for crafting compelling visual narratives
+            My experience in graphic design has been invaluable, shaping my approach to creativity and problem-solving in both design and cybersecurity.
+        </p>
+        
+        <p>
+            My interest in cybersecurity began unexpectedly through YouTube.
+            I was fascinated by videos showcasing the world of hacking and digital defense, which ignited a passion for the field. 
+            To pursue this interest further, I enrolled in a university cybersecurity program. 
+            However, I soon realized that the program’s broad curriculum didn’t align with my specific interests in red teaming and blue teaming.
+            Seeking deeper specialization, I decided to pause my formal studies to focus on hands-on experiences and targeted learning in these areas.
+            My enthusiasm for cybersecurity remains strong as I continue to explore and develop my skills in the areas I’m most passionate about.
+        </p>
+
+        <img src="./src/line.png" alt="separator line" class="line" draggable="false">
+    </section>
+
+    <!-- projet -->
+    <section id="project">
+        <h2>Some of my Project</h2>
+
+        <div class="wrapper">
+            <div id="project-wrapper">
+                <img 
+                src="./src/project/inter.net.jpg"
+                alt="inter.net"
+                class="projectImg"
+                draggable="false"
+                data-story="Inter.net is a project that merges my dual passions: the expansive network that is the internet and the intricate art of graphic design. It explores how these two fields intersect, showcasing the seamless integration of technology and aesthetics to create a cohesive digital experience."
+                >
+            
+            <img 
+                src="./src/project/dead inside.jpg"
+                alt="Dead inside"
+                class="projectImg"
+                draggable="false"
+                data-story="‘Dead Inside’ was an exciting challenge I tackled with a friend. We were given three random pictures and just 30 minutes to craft a unique piece. The result is a creative blend of spontaneity and skill, capturing the essence of quick, collaborative design under pressure."
+                >
+            
+            <img 
+                src="./src/project/why do you look at me like that.jpg"
+                alt="Why do you look at me like that"
+                class="projectImg"
+                draggable="false"
+                data-story="‘Why Do You Look at Me Like That’ is one of my earliest projects outside of a formal educational setting. It reflects my initial foray into personal design work, capturing a moment of exploration and growth as I began to develop my style and voice in graphic design."
+                >
+            
+            <img 
+                src="./src/project/guink.ttt.jpg"
+                alt="Guink.ttt"
+                class="projectImg"
+                draggable="false"
+                data-story="Guink.ttt is a tattoo artist based in Liège, Belgium, for whom I had the pleasure of designing a business card. This project showcases my ability to create visual identities that reflect the unique style and professionalism of the client, enhancing their brand presence."
+                >
+            
+            <img 
+                src="./src/project/in progress.jpg"
+                alt="In progress"
+                class="projectImg"
+                draggable="false"
+                data-story="‘In Progress’ represents my first venture into multi-color design. This project marks a significant milestone in my journey, demonstrating my ability to handle complex color schemes and create visually engaging designs that push the boundaries of my creativity."
+                >
+            
+            </div>
+
+            <article>
+                <h2>Learn more about my project</h2>
+                <p>
+                    Each image represents a unique project with its own story.<br>
+                    Hover over the images to uncover the journey and inspiration behind each creation.
+                </p>
+            </article>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact me</h2>
+        <div class="contact-wrapper">
+            <p>I'd love to hear from you! Feel free to reach out through any of the following channels:</p>
+            <ul class="contact-list">
+                <li>
+                    <a href="mailto:aloisleroy10@gmail.com" class="contact-link">
+                        <img src="./src/icons/mail.png" alt="Email">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/laiso.wav" target="_blank" class="contact-link">
+                        <img src="./src/icons/instagram.png" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/laisoJS" target="_blank" class="contact-link">
+                        <img src="./src/icons/github.png" alt="GitHub">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <script src="./scripts/stepper.js"></script>
+    <script src="./scripts/project.js"></script>
+</body>
+</html>
