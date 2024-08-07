@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const dots = document.querySelectorAll('.dot');
     const sections = document.querySelectorAll('main, section');
+    const stepper = document.querySelector('.stepper');
 
     function updateActiveDot(activeDot) {
         dots.forEach(dot => dot.classList.remove('active'));
@@ -52,4 +53,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handle scroll events
     window.addEventListener('scroll', handleScroll);
+
+    // Hide stepper on small screens
+    const handleResize = () => {
+        if (window.innerWidth <= 600) {
+            stepper.classList.add('hidden');
+        } else {
+            stepper.classList.remove('hidden');
+        }
+    }
+
+    // Initial check
+    handleResize();
+
+    // Handle resize events
+    window.addEventListener('resize', handleResize);
 });
