@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Hide stepper on small screens
     const handleResize = () => {
-        if (window.innerWidth <= 600) {
+        if (window.innerWidth <= 767) {
             stepper.classList.add('hidden');
         } else {
             stepper.classList.remove('hidden');
