@@ -1,0 +1,28 @@
+@import "../_colors";
+
+.stepper {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+
+    z-index: 999;
+
+    .dot {
+        width: 1em;
+        height: 1em;
+        background-color: $white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .dot.active {
+        background-color: $primary;
+    }
+    
+}

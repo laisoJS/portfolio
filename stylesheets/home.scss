@@ -1,0 +1,305 @@
+@import "_colors";
+@import "_animation";
+
+
+body {
+    width: 100vw;
+    background-color: $black;
+
+    padding: 0 30px;
+
+    overflow-x: hidden;
+}
+
+a, li, p, h1, h2, h3 {
+    color: $white;
+}
+
+main {
+    height: 100vh;
+
+    .title {
+        font-size: 15vh;
+        font-weight: 900;
+
+        padding-top: 2vh;
+
+        z-index: 500;
+
+        animation: slide-top 1s;
+    }
+
+    .about-wrapper {
+        min-height: 20vh;
+        width: 35vw;
+
+        transform: translateX(5vw) translateY(10vh);
+
+        button {
+            display: flex;
+            flex-direction: row;
+
+            cursor: pointer;
+            background-color: $primary;
+
+            margin-top: 3vh;
+            margin-left: 1.5vw;
+
+            padding: 2vh 2vw 2vh 2vw;
+            border-radius: 500vh;
+            border: solid .5vh $primary;
+
+            img {
+                height: 3vh;
+                width: auto;
+
+                margin-left: -.5vw;
+                padding-right: 1.5vw;
+
+                transition: all .5s;
+            }
+
+            p {
+                color: $black;
+                font-size: 2.5vh;
+
+                transition: transform .2s;
+            }
+
+            &:hover {
+                img {
+                    transform: translateX(5.5vw);
+                    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(113deg) brightness(106%) contrast(99%);
+                }
+
+                p {
+                    transform: translateX(10vw);
+                    opacity: 0;
+                }
+
+                background-color: $black;
+            }
+
+        }
+    }
+
+    /*
+        Graph tag
+    */
+    
+    h2 {
+        position: absolute;
+        top: 24%;
+        right: 15%;
+
+        rotate: 5deg;
+
+        font-size: 7vh;
+        font-family: "Ruslan Display", sans-serif;
+
+        color: $black;
+
+        z-index: 50;
+
+        animation: slide-left 2s;
+    }
+
+    .tag {
+        position: absolute;
+        top: -5%;
+        right: -12%;
+        
+        scale: .6;
+        rotate: 5deg;
+
+        border-radius: 50px;
+
+        border-top: 10em solid $primary;
+        border-bottom: 2em solid $primary;
+        border-left: 1em solid $primary;
+        border-right: 1em solid $primary;
+
+        background-color: $primary;
+
+        z-index: 10;
+
+        animation: slide-left 1s;
+        user-select: none;
+    }
+
+    #arrow {
+        position: absolute;
+        top: 40vh;
+
+        animation: slide-top 2s;
+        user-select: none;
+    }
+
+}
+
+#about {
+    height: calc(90vh - 1em);
+    padding-top: 1em;
+
+    h2 {
+        font-size: 7vh;
+        padding-bottom: 1vh;
+    }
+
+    p {
+        margin: 3vh 7vw 0 3vw;
+
+        font-size: 2.7vh;
+        line-height: 3.5vh;
+        text-align: justify;
+    }
+
+    .line {
+        width: 70vw;
+        height: auto;
+
+        padding-top: 1vh;
+        margin-left: auto;
+        margin-right: 0;
+
+        user-select: none;
+
+        filter: invert(44%) sepia(36%) saturate(1369%) hue-rotate(214deg) brightness(98%) contrast(90%);
+    }
+}
+
+#project {
+    height: calc(100vh - 1em);
+    padding-top: 1em;
+
+
+    h2 {
+        font-size: 7vh;
+    }
+
+
+    .wrapper {
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        #project-wrapper {
+            height: 100%;
+            width: 50vw;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            padding-left: 8%;
+            padding-top: 15%;
+        }
+    
+        .projectImg {
+            width: 22vw;
+
+            border: 2px solid $white;
+            border-radius: 15px;
+    
+            transform: rotateY(40deg) rotateX(30deg);
+            transition: transform .5s ease;
+
+            user-select: none;
+        
+            &:hover {
+                transform: scale(1.05) rotateX(0) rotateY(0) translateY(-15%); /* Increase the size on hover */
+                z-index: 50;
+            }
+        
+            &:not(:hover) {
+                transform: scale(1) rotateY(30deg) rotateX(25deg); /* Ensure smooth transition back */
+                transition: transform .3s ease;
+            }
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+
+            width: 45vw;
+            margin-left: 5%;
+
+            h2 {
+                font-size: 5vh;
+                margin-bottom: 2.5vh;
+
+                position: relative;
+
+                &::after {
+                    content: '';
+
+                    position: absolute;
+                    display: block;
+
+                    width: 35vw;
+                    height: .2vh;
+                    
+                    background-color: $primary;
+                }
+
+                &::before {
+                    content: '...';
+                    position: absolute;
+                    display: block;
+
+                    font-size: 4vh;
+
+                    right: 13%;
+                    bottom: 0;
+                    transform: translateY(33%);
+
+                    color: $primary;
+                    
+                }
+            }
+
+            p {
+                font-size: 3vh;
+            }
+        }
+    }
+}
+
+#contact {
+    height: calc(45vh - 1em);
+    padding-top: 1em;
+
+    h2 {
+        font-size: 7vh;
+    }
+
+    .contact-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        padding-top: 5vh;
+
+        p {
+            padding-bottom: 5vh;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: row;
+            gap: 2.5vw;
+
+            padding-bottom: 5vh;
+
+            img {
+                height: 13vh;
+                width: auto;
+
+                filter: invert(92%) sepia(76%) saturate(0%) hue-rotate(7deg) brightness(108%) contrast(99%);
+            }
+        }
+    }
+}
