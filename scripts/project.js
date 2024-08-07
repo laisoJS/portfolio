@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     projectImgs.forEach((img, index) => {
             // Stack card
             img.style.marginLeft = `${(index - 1) * 13}%`;
-            img.style.marginTop = "-40vh";
+            img.style.marginTop = "-40dvh";
 
             // Change the h2 and p tag in article
             img.addEventListener("mouseover", () => {
