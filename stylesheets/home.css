@@ -243,7 +243,7 @@ main #arrow {
   filter: invert(92%) sepia(76%) saturate(0%) hue-rotate(7deg) brightness(108%) contrast(99%);
 }
 
-@media only screen and (min-width: 200px) and (max-width: 767px) and (orientation: portrait) {
+@media only screen and (max-width: 768px) and (orientation: portrait) {
   body::before {
     content: "Work in progress";
     display: block;
@@ -259,7 +259,6 @@ main #arrow {
     text-align: center;
     z-index: 1000;
   }
-
   main, section, .hidden {
     display: none !important;
   }

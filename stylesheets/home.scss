@@ -304,7 +304,7 @@ main {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) and (orientation: portrait) {
     body::before {
         content: "Work in progress";
         display: block;
@@ -318,7 +318,7 @@ main {
         padding: 10px 20px;
         border-radius: 10px;
         text-align: center;
-        z-index: 1000;
+        z-index: 1000;  
     }
 
     main, section, .hidden {
