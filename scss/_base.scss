@@ -1,0 +1,9 @@
+@use 'variables' as *;
+
+body {
+  font-family: var(--font-main);
+}
+
+h1, h2, h3, p, a {
+  color: var(--color-light); 
+}
