@@ -1,0 +1,72 @@
+@use '../variables' as *;
+
+main {
+  height: 100dvh;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  padding: var(--space-xl);
+
+  background: var(--color-dark);
+
+  .hero__content {
+    position: relative;
+    z-index: 1;
+
+    .title {
+      font-size: var(--fs-title);
+    }
+  }
+
+  .hero-tag {
+    display: inline-block;
+    position: absolute;
+    top: var(--space-xl);
+    right: var(--space-xl);
+
+    width: min(90%, 45dvw);
+
+    border: .5rem solid var(--color-primary);
+    border-radius: .75rem;
+
+    outline: none;
+
+    transform: rotate(7deg);
+    z-index: 2;
+
+    background: var(--color-primary);
+
+    &__header {
+      padding: 0.5rem 1rem;
+      min-height: 2rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: var(--fs-subtitle);
+      font-family: var(--font-secondary);
+      font-weight: 400;
+      color: var(--color-dark);
+    }
+  }
+
+  .hero__arrow {
+    position: absolute;
+    bottom: var(--space-md);
+    left: var(--space-lg);
+
+    width: clamp(2rem, 5vw, 4rem);
+    height: auto;
+
+    z-index: 1;
+  }
+}
+
